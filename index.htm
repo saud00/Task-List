@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
     <title>Hello, world!</title>
+
+    <style>
+        .remove{
+            display:flex;
+            justify-content: flex-end;
+        }
+    </style>
   </head>
   <body>
 
@@ -31,8 +38,10 @@
 
 <input class="filter m-3" placeholder="filter task" style="outline:none;border-left:none;border-top: none;border-right: none;" id="filter"></input><br>
 
-<div id="ul" ></div>
-
+<div >
+    <ul class="list-group" id="ul"></ul>
+</div>
+<br>
 <button class="clear btn btn-dark btn-lg" id="clear">Clear Task</button>
 
 </div>
