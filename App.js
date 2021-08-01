@@ -51,10 +51,24 @@ function removeFunction(e) {
 let filterVal;
 filter.addEventListener("input", function (e) {
   filterVal = e.target.value;
-  console.log(listArray.filter(filterFunction));
+
+  const select = document.querySelectorAll(".list-group-item");
+  console.log(select);
+  select.forEach(function (val, ind) {
+    {
+      val.textContent.includes(filterVal)
+        ? (val.style.display = "block")
+        : (val.style.display = "none");
+    }
+  });
 });
 
-function filterFunction(val) {
-  console.log(val);
-  return val == filterVal;
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", clearList);
+
+function clearList() {
+  const select = document.querySelectorAll(".list-group-item");
+  select.forEach(function (e) {
+    e.remove();
+  });
 }
